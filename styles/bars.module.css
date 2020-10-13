@@ -1,0 +1,103 @@
+
+
+/* ---------------------------------------------------------- */
+/* General
+/* ---------------------------------------------------------- */
+
+/* Menu bar
+/* ---------------------------------------------------------- */
+.li_menu{
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 0px 20px 0px 20px;
+  text-decoration: none;
+  font-size: .8em;
+}
+
+.li_menu a{
+  color: gray;
+}
+
+.li_about a{
+  color: gray;
+}
+
+.li_about a:hover{
+  color: white;
+}
+
+.li_menu a:hover{
+  color: white;
+}
+
+.li_about{
+  float: right;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 0px 10px 0px 100px;
+  text-decoration: none;
+  font-size:.8em;
+}
+.ul_menubar {
+  list-style-type: none;
+  margin: 0;
+  padding: 5px 0px 5px 0px;
+  overflow: hidden;
+  background-color: #333;
+}
+
+
+/* Footer
+/* ---------------------------------------------------------- */
+.lifooter-left{
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 0px 0px 0px 10px;
+  text-decoration: none;
+  font-size: .8em;
+}
+
+.lifooter-right{
+  float: right;
+  display: block;
+  text-align: center;
+  padding: 0px 10px 0px 00px;
+  text-decoration: none;
+  font-size: .8em;
+}
+.ulfooter-menubar {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px 0px 0px 0px;
+  overflow: hidden;
+}
+
+/* Footer
+/* ---------------------------------------------------------- */
+.lifooter_left{
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 0px 0px 0px 10px;
+  text-decoration: none;
+  font-size: .8em;
+}
+
+.lifooter_right{
+  float: right;
+  display: block;
+  text-align: center;
+  padding: 0px 10px 0px 00px;
+  text-decoration: none;
+  font-size: .8em;
+}
+.ulfooter_menubar {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px 0px 0px 0px;
+  overflow: hidden;
+}
