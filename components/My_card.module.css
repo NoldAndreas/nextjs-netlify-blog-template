@@ -1,0 +1,9 @@
+.card_img_top{
+    width: 100%;
+    height: 10rem;
+    object-fit: contain;
+}
+
+.titleStyle{
+  text-align: center;
+}

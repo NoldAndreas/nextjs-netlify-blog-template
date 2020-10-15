@@ -24,9 +24,9 @@ export default function Home({allPostsData}) {
         <title>{siteTitle}</title>
       </Head>
       <div className="card-columns">
-        <My_card title="Contact lines" src="/images/contactline.png" href="./ContactLine_BridgingScales"> Combining scales </My_card>
-        <My_card title="Working memory" src="/images/PRG1_Model.jpeg"  href="./Project_PRG1"> Forgetting short term memories </My_card>
-        <My_card title="Book reviews" src="/images/books.png" href="./Books"> Book reviews </My_card>
+        <My_card title="Contact lines" src="/images/contactline.png" href="./ContactLine_BridgingScales"/>
+        <My_card title="Working memory" src="/images/PRG1_Model.jpeg"  href="./Project_PRG1"/>
+        <My_card title="Book reviews" src="/images/books.png" href="./Books"/>
       </div>
     </Layout>
   )

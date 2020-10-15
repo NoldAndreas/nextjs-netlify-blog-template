@@ -1,27 +1,25 @@
 //import React from "react"
 //import { css } from "@emotion/core"
-//import "../styles/layout.css"
+
 //import { rhythm } from "../utils/typography"
 import {Card,Image} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
+import myCard_styles from "./My_Card.module.css"
 
 export default function My_card({title,src,href,children }) {
   return(
-    <Card className="mt-3 text-left">
+    <Card className="mt-3 text-left" style={{ height: '14rem' }}>
       <Card.Link href={href}>
       <Image
         src = {src}
-        className = "card-img-top"
+        className = {myCard_styles.card_img_top}
         alt="random image"
       />
       </Card.Link>
       <Card.Body>
         <Card.Link href={href}>
-        <Card.Title>{title}</Card.Title>
+        <Card.Title className={myCard_styles.titleStyle}>{title}</Card.Title>
         </Card.Link>
-        <Card.Text>
-        {children}
-        </Card.Text>
       </Card.Body>
     </Card>
   );
@@ -29,6 +27,9 @@ export default function My_card({title,src,href,children }) {
 
 
 /*
+<Card.Text>
+{children}
+</Card.Text>
 //aber funktioniert irgendwie nicht:
 <div class="card text-left mb-3">
   <img class="card-img-top" src={im} alt="Card image cap" />
