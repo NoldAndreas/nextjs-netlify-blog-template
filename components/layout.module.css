@@ -23,3 +23,13 @@
 .backToHome {
   margin: 3rem 0 0;
 }
+
+.viewport {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica',
+      'Arial', sans-serif;
+    font-size: 18px;
+}

@@ -10,7 +10,7 @@ export const siteTitle = 'Andreas Sample Website'
 
 export default function Layout({title, children, home }) {
   return (
-    <div>
+    <div className={styles.viewport}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
