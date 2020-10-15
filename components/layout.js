@@ -11,8 +11,7 @@ export const siteTitle = 'Andreas Sample Website'
 export default function Layout({title, children, home }) {
   return (
     <div className={styles.viewport}>
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>        
+      <Head>                
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
