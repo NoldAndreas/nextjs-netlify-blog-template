@@ -4,7 +4,7 @@
 //import { rhythm } from "../utils/typography"
 import {Card,Image} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
-import myCard_styles from "./My_Card.module.css"
+import myCard_styles from "./My_card.module.css"
 
 export default function My_card({title,src,href,children }) {
   return(
