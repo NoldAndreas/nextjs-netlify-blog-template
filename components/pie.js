@@ -5,6 +5,7 @@ const colors = d3.scaleOrdinal(d3.schemeCategory10)
 const format = d3.format('.2f')
 
 const Arc = ({ index, pieData, colors, innerRadius, outerRadius }) => {
+
   const arcGenerator = d3
     .arc()
     .innerRadius(innerRadius)
@@ -16,6 +17,7 @@ const Arc = ({ index, pieData, colors, innerRadius, outerRadius }) => {
       startAngle: pieData.startAngle,
       endAngle: pieData.endAngle,
     })
+  console.log(progressArc(pieData));
   return (
     <g key={index} className="arc">
       <path
@@ -38,6 +40,7 @@ const Arc = ({ index, pieData, colors, innerRadius, outerRadius }) => {
 }
 
 const Pie = props => {
+  console.log(props);
   const createPie = d3
     .pie()
     .value(d => d.value)
