@@ -1,15 +1,8 @@
-import React, {useState,useEffect} from 'react'
+import React, { useEffect ,useState} from 'react'
 import * as d3 from 'd3'
-import Layout from "../components/layout"
-import Graph1 from "../components/Graph1"
 
 
-const getRandomData = () =>
-  d3.range(20).map(() => ({x:Math.random(), y:Math.random()}))
-
-
-export default function Project_PRG1() {
-
+const Graph1 = props => {
   const [data,setData] = useState();
 
   var margin = {top: 30, left: 30,bottom:40,right:30},
@@ -21,7 +14,7 @@ export default function Project_PRG1() {
      console.log(data);
      setData(data);
 
-     var svg = d3.select("#my_dataviz")
+     var svg = d3.select("#my_datavizz")
        .append("div")
         // Container class to make it responsive.
         .classed("svg-container", true)
@@ -40,11 +33,11 @@ export default function Project_PRG1() {
      var allGroup = ["silent", "transient","persistent","self-evoked","asynchronous"];
 
      // add the options to the button
-     d3.select("#selectButton")
+     d3.select("#selectButtonn")
        .selectAll('myOptions')
-      	.data(allGroup)
+        .data(allGroup)
        .enter()
-     	.append('option')
+      .append('option')
        .text(function (d) { return d; }) // text showed in the menu
        .attr("value", function (d) { return d; }) // corresponding value returned by the button
 
@@ -122,7 +115,7 @@ export default function Project_PRG1() {
            }
 
            // When the button is changed, run the updateChart function
-           d3.select("#selectButton").on("change", function(d) {
+           d3.select("#selectButtonn").on("change", function(d) {
                // recover the option that has been chosen
                var selectedOption = d3.select(this).property("value")
                // run the updateChart function with this selected option
@@ -133,19 +126,11 @@ export default function Project_PRG1() {
   },[]);
 
 
-  //const data = getRandomData();
-  console.log(data);
   return (
-    <Layout title ="PRG1 working memory">
-    <p>
-    Check out the full paper on "Formation and synaptic control of active transient working memory representations" at <a href={"https://www.biorxiv.org/content/10.1101/2020.08.30.273995v1"}> BioRxiv </a>.
-    </p>
-    <p>Neural representations of working memory maintain information temporarily and make it accessible for processing. This is most feasible in active, spiking representations. State-of-the-art modeling frameworks, however, reproduce working memory representations that are either transient but non-active or active but non-transient. Here, we analyze a biologically motivated working memory model which shows that synaptic short-term plasticity and noise emerging from spiking networks can jointly produce a working memory representation that is both active and transient. We investigate the effect of a synaptic signaling mechanism whose dysregulation is related to schizophrenia and show how it controls transient working memory duration through presynaptic, astrocytic and postsynaptic elements. Our findings shed light on the computational capabilities of healthy working memory function and offer a possible mechanistic explanation for how molecular alterations observed in psychiatric //diseases such as schizophrenia can lead to working memory impairments.</p>
-    <div id="my_dataviz" align="center"><select id="selectButton"></select></div>
-    <Graph1
-      width={400}
-      height={400}
-    />
-    </Layout>
-    )
+    <>
+      <div id="my_datavizz" align="center"><select id="selectButtonn"></select></div>
+    </>
+  )
 }
+
+export default Graph1
