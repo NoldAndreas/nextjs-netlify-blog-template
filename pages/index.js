@@ -27,14 +27,15 @@ export default function Home({allPostsData}) {
       <div className="card-columns">
         <My_card title="Contact lines" src="/images/contactline.png" href="./ContactLine_BridgingScales"/>
         <My_card title="Working memory" src="/images/PRG1_Model.jpeg"  href="./Project_PRG1"/>
-        <My_card title="Book reviews" src="/images/books.png" href="./Books"/>
       </div>
     </Layout>
   )
 }
 
 
-/*  <section className={utilStyles.headingMd}></section>
+/*
+<My_card title="Book reviews" src="/images/books.png" href="./Books"/>
+  <section className={utilStyles.headingMd}></section>
   <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
     <h2 className={utilStyles.headingLg}>Blog</h2>
     <ul className={utilStyles.list}>
