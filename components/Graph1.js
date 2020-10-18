@@ -125,7 +125,6 @@ const Graph1 = props => {
    });
   },[]);
 
-
   return (
     <>
       <div id="my_datavizz" align="center"><select id="selectButtonn"></select></div>
