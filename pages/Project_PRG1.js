@@ -2,6 +2,9 @@ import React, {useState,useEffect} from 'react'
 import * as d3 from 'd3'
 import Layout from "../components/layout"
 import Graph1 from "../components/Graph1"
+//import Tooltip from 'react-tooltip-lite'
+import ReactTooltip from 'react-tooltip'
+import utilStyles from '../styles/utils.module.css'
 
 
 export default function Project_PRG1() {
@@ -17,7 +20,7 @@ export default function Project_PRG1() {
 
     <h3>Representation of items in the brain </h3>
 
-    One <a href="https://science.sciencemag.org/content/319/5869/1543">idea </a> is that working memory items are represented in the brain as recurrent population spikes.
+    One <span data-tip="Mongillo, Tsodyks: 'Synaptic Theory of Working Memory', Science (2008)"> <a href="https://science.sciencemag.org/content/319/5869/1543">idea </a> </span> is that working memory items are represented in the brain as recurrent population spikes.
     As the background activity increases, a neural network traverses different states.
     <Graph1
       width={400}
@@ -50,10 +53,13 @@ export default function Project_PRG1() {
     disrupt this regime. This hypothesis needs to be tested experimentally.
 
     <p>
-    Check out the full paper on "Formation and synaptic control of active transient working memory representations" at <a href={"https://www.biorxiv.org/content/10.1101/2020.08.30.273995v1"}> BioRxiv </a>.
+    Check out the full paper
+    <span data-tip="Becker et al., 'Formation and synaptic control of active transient working memory representations', BioRxiv">
+    <a href={"https://www.biorxiv.org/content/10.1101/2020.08.30.273995v1"}> here </a>
+    </span>.
     </p>
 
-
+    <ReactTooltip className={utilStyles.tooltip}/>
     </Layout>
     )
 }
