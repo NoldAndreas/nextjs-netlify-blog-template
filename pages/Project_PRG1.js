@@ -1,11 +1,13 @@
 import React, {useState,useEffect} from 'react'
 import * as d3 from 'd3'
 import Layout from "../components/layout"
+import Graph0 from "../components/Graph_Rasterplot"
+//import Rechart_Graph from "../components/Rechart_Graph"
 import Graph1 from "../components/Graph1"
 //import Tooltip from 'react-tooltip-lite'
 import ReactTooltip from 'react-tooltip'
 import utilStyles from '../styles/utils.module.css'
-
+    //<Rechart_Graph/>
 
 export default function Project_PRG1() {
 
@@ -22,6 +24,8 @@ export default function Project_PRG1() {
 
     One <span data-tip="Mongillo, Tsodyks: 'Synaptic Theory of Working Memory', Science (2008)"> <a href="https://science.sciencemag.org/content/319/5869/1543">idea </a> </span> is that working memory items are represented in the brain as recurrent population spikes.
     As the background activity increases, a neural network traverses different states.
+    <Graph0/>
+
     <Graph1
       width={400}
       height={400}
