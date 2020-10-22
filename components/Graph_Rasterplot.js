@@ -3,33 +3,22 @@ import {ScatterChart,
         XAxis,
         YAxis,
         CartesianGrid,
-        Scatter} from "recharts"
+        Scatter,
+        Label} from "recharts"
 import * as d3 from 'd3'
 
-const data_hardcoded = [
-  { x: 10, y: 180 },
-  { x: 20, y: 200 },
-  { x: 50, y: 380 },
-  { x: 70, y: 50 },
-  { x: 90, y: 200 },
-  { x: 210, y: 50 }
-];
+//const data_loaded = import('Mongillo2008_Reproduce_Fig2B-gpopout095_Rasterplot_Pop0.csv');
 
 const Graph_Rasterplot = props => {
 
   const [data,setData] = useState([]);
+
   useEffect(() =>{
-   d3.csv('/Mongillo2008_Reproduce_Fig2B-gpopout095_Rasterplot.csv').then(data =>{
+   d3.csv('/Mongillo2008_Reproduce_Fig2B-gpopout095_Rasterplot_Pop0.csv').then(data =>{
      setData(data);
+     console.log("loadingData")
    })
- });
-
-/*  const [data,setData] = useState();
-  useEffect(() =>{
-    setData(TABLE_LIST_1);
-    console.log(data);
-  });*/
-
+  },[]);
 
   return (
     <div>
@@ -38,8 +27,15 @@ const Graph_Rasterplot = props => {
        height={400}
        margin={{ top: 20, right: 30, bottom: 20, left: 20 }}>
        <CartesianGrid />
-       <XAxis type="number" dataKey={"time"} name="time" domain={[0, 4]}/>
-       <YAxis type="number" dataKey={"neuron_id"} name="Neuron id"  domain={[0, 4000]}/>
+       <XAxis type="number" dataKey={"time"} name="time" domain={[0, 4]}>
+            <Label value="Time"
+                   dy={20}/>
+       </XAxis>
+       <YAxis type="number" dataKey={"neuron_id"} name="Neuron id"  domain={[0,800]} text="sda">
+          <Label value="Neuron #"
+              dx={-20}
+              angle={-90}/>
+       </YAxis>
       <Scatter
           name="Median"
           data={data}

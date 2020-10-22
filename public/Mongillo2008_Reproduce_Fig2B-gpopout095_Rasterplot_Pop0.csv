@@ -1,4 +1,4 @@
-time,neuron_id,pop_id
+time,neuron_id,neuron_pop_id
 0.0911,230,0
 0.1041,220,0
 0.1082,680,0

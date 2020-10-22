@@ -9,6 +9,7 @@ import ReactTooltip from 'react-tooltip'
 import utilStyles from '../styles/utils.module.css'
     //<Rechart_Graph/>
 
+
 export default function Project_PRG1() {
 
   return (
@@ -23,9 +24,9 @@ export default function Project_PRG1() {
     <h3>Representation of items in the brain </h3>
 
     One <span data-tip="Mongillo, Tsodyks: 'Synaptic Theory of Working Memory', Science (2008)"> <a href="https://science.sciencemag.org/content/319/5869/1543">idea </a> </span> is that working memory items are represented in the brain as recurrent population spikes.
-    As the background activity increases, a neural network traverses different states.
     <Graph0/>
 
+    As the background activity increases, a neural network traverses different states.
     <Graph1
       width={400}
       height={400}

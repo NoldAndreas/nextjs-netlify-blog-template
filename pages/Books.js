@@ -18,6 +18,7 @@ export async function getStaticProps() {
 
 
 export default function Books({allPostsData}) {
+  console.log({allPostsData})
   return (
     <Layout title="Book reviews">
       <Head>
