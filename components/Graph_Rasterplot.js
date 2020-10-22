@@ -39,7 +39,7 @@ const Graph_Rasterplot = props => {
             dx={-30}
             angle={-90}/>
         </YAxis>
-        <Line type="monotone" data={dataExt} dataKey="mu_Ext_0" stroke="#8884d8"/>
+        <Line type="monotone" data={dataExt} dataKey="mu_Ext_0" stroke="#8884d8" dot={false}/>
       </LineChart>
     </ResponsiveContainer>
     <ResponsiveContainer  width='100%' aspect={3.0/2.0}>
@@ -60,6 +60,7 @@ const Graph_Rasterplot = props => {
           data={data}
           fill="#8884d8"
           shape="circle"
+          strokeWidth = {2}
         />
         </ScatterChart>
       </ResponsiveContainer>
