@@ -4,7 +4,9 @@ import {ScatterChart,
         YAxis,
         CartesianGrid,
         Scatter,
-        Label} from "recharts"
+        Label,
+        LineChart,Line,
+        ResponsiveContainer} from "recharts"
 import * as d3 from 'd3'
 
 //const data_loaded = import('Mongillo2008_Reproduce_Fig2B-gpopout095_Rasterplot_Pop0.csv');
@@ -12,19 +14,36 @@ import * as d3 from 'd3'
 const Graph_Rasterplot = props => {
 
   const [data,setData] = useState([]);
+  const [dataExt,setDataExt] = useState([]);
 
   useEffect(() =>{
    d3.csv('/Mongillo2008_Reproduce_Fig2B-gpopout095_Rasterplot_Pop0.csv').then(data =>{
      setData(data);
      console.log("loadingData")
-   })
+   });
+
+   d3.csv('/Mongillo2008_Reproduce_Fig2B-gpopout095_Data.csv').then(data =>{
+     setDataExt(data);
+     console.log("loadingDataExt")
+     console.log(data)
+   });
   },[]);
 
   return (
     <div>
+    <ResponsiveContainer  width='100%' aspect={6.0/1.0}>
+      <LineChart margin={{ top: 20, right: 30, bottom: 20, left: 20 }} >
+        <XAxis dataKey="time" name="time" domain={[0, 4]} ticks={[1,2]}/>
+        <YAxis>
+        <Label value="Input"
+            dx={-30}
+            angle={-90}/>
+        </YAxis>
+        <Line type="monotone" data={dataExt} dataKey="mu_Ext_0" stroke="#8884d8"/>
+      </LineChart>
+    </ResponsiveContainer>
+    <ResponsiveContainer  width='100%' aspect={3.0/2.0}>
      <ScatterChart
-       width={600}
-       height={400}
        margin={{ top: 20, right: 30, bottom: 20, left: 20 }}>
        <CartesianGrid />
        <XAxis type="number" dataKey={"time"} name="time" domain={[0, 4]}>
@@ -33,7 +52,7 @@ const Graph_Rasterplot = props => {
        </XAxis>
        <YAxis type="number" dataKey={"neuron_id"} name="Neuron id"  domain={[0,800]} text="sda">
           <Label value="Neuron #"
-              dx={-20}
+              dx={-30}
               angle={-90}/>
        </YAxis>
       <Scatter
@@ -43,8 +62,16 @@ const Graph_Rasterplot = props => {
           shape="circle"
         />
         </ScatterChart>
+      </ResponsiveContainer>
     </div>
   )
 }
 
 export default Graph_Rasterplot
+
+/*
+<LineChart width={300} height={100} margin={{ top: 20, right: 30, bottom: 20, left: 20 }} >
+  <XAxis dataKey="time" dataKey={"time"} name="time" domain={[0, 4]} />
+  <YAxis/>
+  <Line type="monotone" data={dataExt} dataKey="mu_Ext_0" stroke="#8884d8"/>
+</LineChart>*/
