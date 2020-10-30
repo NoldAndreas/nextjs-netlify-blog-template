@@ -41,10 +41,11 @@ export default function Project_PRG1() {
     <ul>
     <li>
     noise can initiate a limit cycle from a regime without limit cycles
-    <img src="/images/line.gif" alt="loading..." />
+    <img src="/images/Figure4_c1.gif" alt="loading..." />
     </li>
     <li>
     Noise can disrupt a limit cycle from a regime with limit cycles
+    <img src="/images/Figure4_c2.gif" alt="loading..." />
     </li>
     </ul>
     <h3> Might unregulated transient working memory durations underly psychiatric diseases?</h3>
@@ -58,7 +59,7 @@ export default function Project_PRG1() {
     disrupt this regime. This hypothesis needs to be tested experimentally.
 
     <p>
-    Check out the full paper
+    Check out the full paper by Sophia Becker et al. 
     <span data-tip="Becker et al., 'Formation and synaptic control of active transient working memory representations', BioRxiv">
     <a href={"https://www.biorxiv.org/content/10.1101/2020.08.30.273995v1"}> here </a>
     </span>.
