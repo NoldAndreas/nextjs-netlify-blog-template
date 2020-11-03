@@ -16,14 +16,19 @@ export default function Project_PRG1() {
     <Layout title ="Working memory">
 
     <h3>What is working memory </h3>
-    Working memory -- or short-term memory -- describes the brain's capacity to
+    Working memory describes the brain's capacity to
     temporarily store a limited number of items. Its limited capacity sets it apart
     from stable long-term memory system. However, a computational models of working
-    memory that is both finite and active is still missing.
+    memory that represents memory through neuronal spikes and is finite in its duration
+    is still missing.
 
     <h3>Representation of items in the brain </h3>
-
-    One <span data-tip="Mongillo, Tsodyks: 'Synaptic Theory of Working Memory', Science (2008)"> <a href="https://science.sciencemag.org/content/319/5869/1543">idea </a> </span> is that working memory items are represented in the brain as recurrent population spikes.
+    One
+    <span data-tip="Fuster, Garrett: 'Neuron Activity Related to Short-Term Memory', Science (1971)"> <a href="https://science.sciencemag.org/content/173/3997/652.long">idea </a> </span>
+    is that working memory items are represented in the brain as recurrent population spikes.
+    This can be implemented in a
+    <span data-tip="Mongillo, Tsodyks: 'Synaptic Theory of Working Memory', Science (2008)"> <a href="https://science.sciencemag.org/content/319/5869/1543">computational model </a> </span>
+    of working memory with short-term-plasticity:
     <Graph0/>
 
     As the background activity increases, a neural network traverses different states.
@@ -31,8 +36,10 @@ export default function Project_PRG1() {
       width={400}
       height={400}
     />
-    We find one transient state, in which the duration of the population spikes is finite.
-    Is this a mechanism of forgetting?
+
+    Interestingly, we find one transient state, in which the duration of the population spikes is finite.
+    Is this a mechanism that could complement
+    <span data-tip="Jonides et al., 'The Mind and Brain of Short-Term Memory', Ann. Rev. Psych. (2008)"> <a href="https://doi.org/10.1146/annurev.psych.59.103006.093615">known mechanisms</a> </span> of forgetting?
 
     <h3>How stable are transient representations of working memory?</h3>
     For this, we study a firing rate model. This is a simplified set
@@ -49,9 +56,10 @@ export default function Project_PRG1() {
     </li>
     </ul>
     <h3> Might unregulated transient working memory durations underly psychiatric diseases?</h3>
-    We incldue the effect of a genetic alteration which was linked to schizophrenia
-    in our synaptic model. We show how this alteration shifts network activity to
-    longer transients -- therefore suppressing the possibility to forget.
+    We include the effect of a genetic alteration which was linked to schizophrenia
+    in our synaptic model. We show how an alteration in this synaptic pathway
+    shifts network activity to longer transients. Could this impact the ability
+    to forget?
 
     <h3>And now?</h3>
     The computational model suggests that forgetting happens in a tuned regime
@@ -59,7 +67,7 @@ export default function Project_PRG1() {
     disrupt this regime. This hypothesis needs to be tested experimentally.
 
     <p>
-    Check out the full paper by Sophia Becker et al. 
+    Check out the full paper by Sophia Becker et al.
     <span data-tip="Becker et al., 'Formation and synaptic control of active transient working memory representations', BioRxiv">
     <a href={"https://www.biorxiv.org/content/10.1101/2020.08.30.273995v1"}> here </a>
     </span>.
