@@ -6,25 +6,16 @@ import Header from "./header"
 import Footer from "./footer"
 
 const name = 'Andreas'
-export const siteTitle = 'Andreas Sample Website'
+export const siteTitle = 'Andreas Nold'
 
 export default function Layout({title, children, home }) {
   return (
     <div className={styles.viewport}>
-      <Head>                
-        <link rel="icon" href="/favicon.ico" />
+      <Head>
         <meta
           name="description"
-          content="Learn how to build a personal website using Next.js"
+          content="Andreas projects"
         />
-        <meta
-          property="og:image"
-          content={`https://og-image.now.sh/${encodeURI(
-            siteTitle
-          )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
-        />
-        <meta name="og:title" content={siteTitle} />
-        <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <Header/>
       <main className={styles.container}>
@@ -42,6 +33,17 @@ export default function Layout({title, children, home }) {
     </div>
   )
 }
+
+/*<meta
+  property="og:image"
+  content={`https://og-image.now.sh/${encodeURI(
+    siteTitle
+  )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
+/>
+<meta name="og:title" content={siteTitle} />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="/favicon.ico" />
+*/
 
 /*
 <header className={styles.header}>

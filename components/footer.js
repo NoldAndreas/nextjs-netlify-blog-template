@@ -8,7 +8,7 @@ const Footer = ({ siteTitle }) => (
         <ul className={barStyles.ulfooter_menubar}>
           <li className={barStyles.lifooter_left}> by Andreas Nold &mdash; <a href="https://github.com/NoldAndreas"> Github </a>
             &mdash; <a href="https://www.linkedin.com/in/andreas-nold-8686561/"> LinkedIn </a></li>
-          <li className={barStyles.lifooter_right}>  October 2020 </li>
+          <li className={barStyles.lifooter_right}>  November 2020 </li>
         </ul>
   </footer>
 
